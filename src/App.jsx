@@ -4,6 +4,9 @@ import CoreConcept from "./components/CoreConcept.jsx";
 import TabButton from "./components/TabButton.jsx";
 
 function App() {
+  function handleSelect() {
+    console.log("sdfn");
+  }
   return (
     <div>
       <Header />
@@ -21,7 +24,7 @@ function App() {
           <h2>Examples</h2>
           <menu>
             <li>
-              <button>Components</button>
+              <button onSelect={handleSelect}>Components</button>
               <button>JSX</button>
               <button>Props</button>
               <button>State</button>
