@@ -4,9 +4,11 @@ import CoreConcept from "./components/CoreConcept.jsx";
 import TabButton from "./components/TabButton.jsx";
 
 function App() {
-  function handleSelect() {
-    console.log("sdfn");
+  function handleSelect(selectedButton) {
+    // selectedButton => 'components', 'jsx', 'props', 'state'
+    console.log(selectedButton);
   }
+
   return (
     <div>
       <Header />
@@ -24,12 +26,15 @@ function App() {
           <h2>Examples</h2>
           <menu>
             <li>
-              <button onSelect={handleSelect}>Components</button>
-              <button>JSX</button>
-              <button>Props</button>
-              <button>State</button>
+              <button onSelect={() => handleSelect("components")}>
+                Components
+              </button>
+              <button onSelect={() => handleSelect("jsx")}>JSX</button>
+              <button onSelect={() => handleSelect("props")}>Props</button>
+              <button onSelect={() => handleSelect("state")}>State</button>
             </li>
           </menu>
+          Dynamic Content
         </section>
       </main>
     </div>
